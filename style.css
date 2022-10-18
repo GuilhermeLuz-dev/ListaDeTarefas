@@ -20,8 +20,8 @@ body {
 #titulo {
     position: absolute;
     color: #97D2EC;
-    font-size: 5vw;
-    top: 5%;
+    font-size: 40px;
+    top:10px;
    
 }
 
@@ -31,7 +31,7 @@ body {
     height: 75%;
     background-color: #5F6F94;
     position: relative;
-    top: 45px;
+
     padding: 10px;
     text-align: center;
     border-radius: 10px;
