@@ -39,16 +39,16 @@ const verificarChecked = (i) => {
                 // Adicionando nota que não está checada;
                 lista.innerHTML += `<li id="nota${i}">` +
                         `<div id="check" onclick="checked(this)">` +
-                        `<img class="imgMark" src="/images/check.png" style="display: none"></div>` +
+                        `<img class="imgMark" src="images/check.png" alt="Lixo" style="display: none"></div>` +
                         JSON.parse(notas[i]).nota + // Transformando uma das strings contidas no array notas, e adicionando-a como objeto na lista;
-                        '<img class="lixo" src="/images/lixeira.png" onclick="remove(this)"></li>';
+                        '<img class="lixo" src="images/lixeira.png" onclick="remove(this)"></li>';
         } else {
                 // Adicionando nota que está checada;
                 lista.innerHTML += `<li id="nota${i}">` +
                         `<div id="check" onclick="notCheked(this)">` +
-                        `<img class="imgMark" src="/images/check.png" style="display: inline"></div>` +
+                        `<img class="imgMark" src="images/check.png" style="display: inline"></div>` +
                         JSON.parse(notas[i]).nota +
-                        '<img class="lixo" src="/images/lixeira.png" onclick="remove(this)"></li>';
+                        '<img class="lixo" src="images/lixeira.png" onclick="remove(this)"></li>';
         }
 }
 
@@ -92,9 +92,9 @@ const guardarNota = () => {
 
                 lista.innerHTML += `<li id="nota${cont}">` +
                         `<div id="check" onclick="checked(this)">` +
-                        `<img class="imgMark" src="/images/check.png" style="display: none"></div>` +
+                        `<img class="imgMark" src="images/check.png" style="display: none"></div>` +
                         nota.value +
-                        '<img class="lixo" src="/images/lixeira.png" onclick="remove(this)"></li>';
+                        '<img class="lixo" src="images/lixeira.png" onclick="remove(this)"></li>';
                 nota.value = ""
         }
         scroll()
