@@ -39,12 +39,15 @@ body {
 }
 
 .boxText {
+    border-radius: 10px;
+    background-color: #97D2EC;
     margin: auto;
     top: 10px;
     width: 90%;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: center; 
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.4);
 }
 
 .boxText img {
@@ -56,17 +59,14 @@ body {
 
 }
 
-.boxText img:hover {
-    width: 35px;
-}
 
 .boxText input {
-    width: 100%;
+    width: 90%;
     padding: 15px;
     border: none;
-    border-radius: 10px;
     background-color: #97D2EC;
-    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+   
 }
 
 .button {
@@ -106,7 +106,7 @@ body {
 
 li {
     width: 90%;
-    height: 25px;
+    min-height: 30px;
     list-style: none;
     background-color: #FEF5AC;
     position: relative;
@@ -117,7 +117,10 @@ li {
     display: flex;
     align-items: center;
     transition: background-color 500ms, box-shadow 500ms;
+    word-wrap: break-word;
+    word-break: break-all;
 }
+
 
 li:hover {
     background-color: #f8e65e;
@@ -125,6 +128,7 @@ li:hover {
 }
 
 #check {
+
     border-radius: 50%;
     width: 15px;
     height: 15px;
