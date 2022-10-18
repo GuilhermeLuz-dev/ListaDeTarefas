@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3176/3176366.png">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="titulo">
+        TO DO LIST
+    </h1>
+    <div class="container">
+        <div class="boxText">
+            <input class="nota" type="text" placeholder="Digite uma nota..."><br>
+            <img src="/images/mais.png" onclick="guardarNota()">
+        </div>
+
+
+        <div class="box">
+            <ul class="list">
+
+            </ul>
+        </div>
+        <input class="button" type="button" value="LIMPAR" onclick="reset()">
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
