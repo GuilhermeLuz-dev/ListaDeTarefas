@@ -14,6 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
 }
 
@@ -31,7 +32,6 @@ body {
     height: 75%;
     background-color: #5F6F94;
     position: relative;
-
     padding: 10px;
     text-align: center;
     border-radius: 10px;
@@ -70,17 +70,18 @@ body {
 }
 
 .button {
-    position: absolute;
     padding: 10px;
     width: 100%;
     max-width: 100px;
     border-radius: 10px;
     border: none;
     background-color: #FEF5AC;
-    bottom: 7px;
-    right: 7%;
-    color: #5F6F94;
+    color: #000;
     transition: background-color 500ms, max-width 500ms;
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
 }
 
 .button:hover {
@@ -101,7 +102,7 @@ body {
     border-radius: 10px;
     overflow-y: hidden;
     box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.4);
-
+    overflow-y: auto;
 }
 
 li {
@@ -150,6 +151,11 @@ li:hover {
     width: 100%;
 
 }
+.textNota{
+    width: 85%;
+    text-align: start;
+    margin: auto;
+}
 
 
 .lixo {
@@ -165,15 +171,55 @@ li:hover {
     width: 20px;
 }
 
+footer {
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+footer div {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+}
+
+footer i {
+    border-radius: 50%;
+}
+
+footer i:hover {
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.377);
+    color:#f8e65e;
+}
+
+a{
+    color: #fff;
+}
+
 @media screen and (max-width: 636px) {
     body {
         align-items: center;
+        align-items: flex-start;
+    }
+    body > h1{
+        display: none;
     }
 
     .container {
         margin-left: 8px;
         margin-right: 8px;
-        height: 75%;
+        height: 80%;
+        top:10px;
+        
     }
 
     .button:hover {
@@ -182,6 +228,6 @@ li:hover {
         background-color: #FEF5AC;
     }
     .button{
-        bottom: 7px;
+        bottom: 10px;
     }
 }

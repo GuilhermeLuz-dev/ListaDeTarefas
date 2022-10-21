@@ -22,7 +22,7 @@ const atualizar = () => {
                 // Readicionando as informações do localstorage na lista de notas da pagina;
                 verificarChecked(i);
         }
-        scroll();
+        
 }
 
 // Atualizando o localStorage após alguma alteração com os dados contido no array notas;
@@ -40,25 +40,17 @@ const verificarChecked = (i) => {
                 lista.innerHTML += `<li id="nota${i}">` +
                         `<div id="check" onclick="checked(this)">` +
                         `<img class="imgMark" src="images/check.png" alt="Lixo" style="display: none"></div>` +
-                        JSON.parse(notas[i]).nota + // Transformando uma das strings contidas no array notas, e adicionando-a como objeto na lista;
+                        `<div class="textNota">${JSON.parse(notas[i]).nota}</div>` + // Transformando uma das strings contidas no array notas, e adicionando-a como objeto na lista;
                         '<img class="lixo" src="images/lixeira.png" onclick="remove(this)"></li>';
         } else {
                 // Adicionando nota que está checada;
                 lista.innerHTML += `<li id="nota${i}">` +
                         `<div id="check" onclick="notCheked(this)">` +
                         `<img class="imgMark" src="images/check.png" style="display: inline"></div>` +
-                        JSON.parse(notas[i]).nota +
+                        `<div class="textNota">${JSON.parse(notas[i]).nota}</div>` +
                         '<img class="lixo" src="images/lixeira.png" onclick="remove(this)"></li>';
         }
 }
-
-// Verificando se é necessario o uso de um scroll na lista de notas;
-const scroll = () => {
-        if (notas.length > 9)
-                addScroll();
-        else removeScroll();
-}
-
 // Eventos que adicionam ou tiram o scroll;
 const addScroll = () => document.querySelector(".box").style.overflowY = "scroll";
 
@@ -93,9 +85,10 @@ const guardarNota = () => {
                 lista.innerHTML += `<li id="nota${cont}">` +
                         `<div id="check" onclick="checked(this)">` +
                         `<img class="imgMark" src="images/check.png" style="display: none"></div>` +
-                        nota.value +
+                        `<div class="textNota">${nota.value}</div>` +
                         '<img class="lixo" src="images/lixeira.png" onclick="remove(this)"></li>';
                 nota.value = ""
+               
         }
         scroll()
 }
@@ -105,7 +98,7 @@ const reset = () => {
         notas.splice(0);
         localStorage.clear();
         lista.innerHTML = "";
-        scroll();
+        
 }
 
 // Marcando nota como realizada;
@@ -151,5 +144,5 @@ const remove = (e) => {
                         }
                 }
         }
-        scroll();
+        
 }
