@@ -81,7 +81,7 @@ body {
     position:absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 5%;
+    bottom: 7px;
 }
 
 .button:hover {
@@ -229,5 +229,16 @@ a{
     }
     .button{
         bottom: 10px;
+    }
+}
+@media screen and (max-height: 600px){
+    body > h1{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    .box{
+        height: 50%;
     }
 }
